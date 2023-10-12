@@ -15,7 +15,13 @@ async function pesquisarVideos(evento) {
         lista.removeChild(lista.firstChild);
     }
 
-    busca.forEach(elemento => lista.appendChild(constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem)));
+    try {
+        busca.forEach(elemento => lista.appendChild(constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem)));   
+    } catch {
+        lista.innerHTML = `
+            <h2 class="mensagem__titulo">Não foi possível realizar a busca.</h2>
+        `;
+    }
 
     if(busca.length === 0) {
         lista.innerHTML = `
