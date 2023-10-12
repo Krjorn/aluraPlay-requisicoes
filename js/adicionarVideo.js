@@ -5,7 +5,7 @@ const formulario = document.querySelector('[data-formulario]');
 async function adicionarVideo(evento) {
     evento.preventDefault();
 
-    const url = document.querySelector('[data-url]').value;
+    const url = formataUrl(document.querySelector('[data-url]').value);
     const titulo = document.querySelector('[data-titulo]').value;
     const imagem = document.querySelector('[data-imagem]').value;
     const descricao = Math.floor(Math.random() * 10).toString();
@@ -17,6 +17,12 @@ async function adicionarVideo(evento) {
     } catch(e) {
         alert(e);
     }
+}
+
+function formataUrl(url) {
+    url = url.slice(-11);
+    const urlFormatada = `https://www.youtube.com/embed/${url}`;
+    return urlFormatada;
 }
 
 formulario.addEventListener('submit', evento => adicionarVideo(evento));
