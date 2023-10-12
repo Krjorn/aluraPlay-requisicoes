@@ -1,6 +1,6 @@
 # AluraPlay - requisições
 
-Projeto desenvolvido como parte do curso JavaScript: criando requisições da Alura, voltado ao estudo de requisições feitas para uma API em JavaScript (*GET* e *POST*), que tornaram possível a apresentação, inserção e busca de vídeos na plataforma.
+Projeto desenvolvido como parte do curso "JavaScript: criando requisições" da Alura, voltado ao estudo de requisições feitas em JavaScript (*GET* e *POST*), para uma API mockada utilizando o *json-server*. Isso tornou possível a apresentação, inserção e busca de vídeos na plataforma.
 
 | :placard: Vitrine.Dev ||
 | ------------- | --- |
